@@ -64,7 +64,7 @@ namespace BasicSeleniumWebDriver
             clickLoginButton.Click();
 
             // -- Assert --
-            Assert.AreEqual(expectedUrl, this._webDriver.Url, $"The url must be {expectedUrl}");
+            Assert.AreEqual(expectedUrl, this._webDriver.Url, string.Format("The url must be {0}", expectedUrl));
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace BasicSeleniumWebDriver
             // Click accept button alert
             alert.Accept();
 
-            Assert.AreEqual(alertText, realText, $"The alert text must be {alertText}");
+            Assert.AreEqual(alertText, realText, string.Format("The alert text must be {0}", alertText));
         }
     }
 }
